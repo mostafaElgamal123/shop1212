@@ -1,0 +1,32 @@
+
+
+@keyframes swing {
+    0%{transform: rotate(3deg)}
+    100%{transform: rotate(-3deg)}
+}
+
+
+@keyframes dropdown-both {
+    0%{
+        top: 127%;
+    }
+    100%{top: 100%;}
+}
+@keyframes dropdown-both-close {
+    0%{
+        top: 100%;
+    }
+    100%{top: 127%;}
+}
+@keyframes dropdown-both-tit {
+    0%{
+        top: 60px;
+    }
+    100%{top: 45;}
+}
+@keyframes dropdown-both-tit-close {
+    0%{
+        top: 45;
+    }
+    100%{top: 60px;}
+}

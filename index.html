@@ -1,0 +1,2206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo/logo-en.png" type="image/x-icon">
+    <title>vegetables</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate-style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+</head>
+<body>
+  <!-- create arrow-top -->
+   <a id="arrow-top" href="#!">
+    <i class="icon-angle fa fa-angle-up" aria-hidden="true"></i>
+   </a>
+  <!-- end create arrow-top -->
+  <!-- create loading -->
+   <div class="spinner-load">
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      </div>
+   </div>
+  <!-- create loading -->
+  <!-- create  alerts-->
+   <div class="alerts">
+     <a href="#!" id="btn-alert">
+      <i class="icon-alert fa fa-bell" aria-hidden="true"></i>
+    </a>
+     <div class="content-alert">
+       <div class="container px-0">
+         <div class="row g-2 justify-content-center">
+          <div class="col-12 col-md-4 my-auto d-flex">
+            <div class="alert-img">
+              <img class="logo-fluid mt-md-0 mt-4" src="images/logo/logo-en.png" alt="">
+            </div>
+          </div>
+           <div class="col-12 col-md-8 d-flex">
+             <div class="content">
+               <p>
+                Subscribe to free alerts to receive offers and discounts.
+               </p>
+             </div>
+           </div>
+           <div class="col-12">
+            <div class="group-alert d-flex">
+              <a href="#!" class="close">Later</a>
+              <a href="mailto:" class="open">OK</a>
+            </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  <!-- create  alerts-->
+  <!-- start create button cart -->
+  <div class="items-basket">
+    <a href="#!" id="inp-basket">
+     <i class="icon-cart fa fa-times" aria-hidden="true"></i>
+    </a>
+  <div class="basket-conent">
+    <a href="#">
+      <span>shopping basket</span>
+    </a>
+    <div id="idbasket">
+        
+    </div>
+    <div class="basket-footer text-center p-2">
+      <span>Subtotal</span>
+      <span>2000$</span>
+      <p>For shipping costs, please complete the purchase process</p>
+      <a href="cart-page.html">View cart</a>
+      <a href="checkout-page.html">Checkout</a>
+      <a href="index.html">Continue shopping</a>
+    </div>
+  </div>
+  
+</div>
+  <!-- End create button cart -->
+     <!-- create bar top -->
+     <div class="bar-top">
+         <div class="container  d-flex flex-wrap justify-content-between align-items-center ">
+            <div class="tit-menu size-xl d-flex align-items-center ">
+                <a href="#!" class="btn-location">
+                  <i class="map-icon fa fa-street-view" aria-hidden="true"></i>
+                  <strong> </strong>
+                  <i class="angle-icon fa fa-angle-down" aria-hidden="true"></i>
+
+                </a>
+                <a href="#!" class="lang">ar</a>
+                <div class="form-location">
+                  <h3>Select Location</h3>
+                  <form>
+                    <label for="">City</label>
+                    <input id="loc1" type="text" list="cities" class="form-select">
+                    <label for="">District</label>
+                    <input id="loc2" type="text" list="districts" class="form-select">
+                    <button class="btn-form">confirm</button>
+                  </form>
+                </div>
+            </div>
+            <div class="tit-menu size-sm d-none justify-content-between align-items-center">
+              <a href="#!" class="btn-location">
+                <i class="map-icon fa fa-street-view" aria-hidden="true"></i>
+                <strong>cairo - Bani Sweif</strong>
+                <i class="angle-icon fa fa-angle-down" aria-hidden="true"></i>
+              </a>
+              <a href="#!" class="lang">ar</a>
+              <div class="form-location">
+                <h3>Select Location</h3>
+                <form>
+                  <label for="">City</label>
+                  <input id="loc1mobiel" type="text" list="cities" class="form-select">
+                  <label for="">District</label>
+                  <input id="loc2mobiel" type="text" list="districts" class="form-select">
+                  <button class="btn-form">confirm</button>
+                </form>
+              </div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link cart-view" aria-current="page" href="#!">
+                    <i class="icon-cart fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span data-src="images/tag.png" style="background-image: url('images/tag.png');">10</span>
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+            <button id="nav-toggle" type="button">
+              <i class="icon-toggle fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <form class="form-search d-flex position-relative my-3">
+                <input onkeyup="searchBasket(this.value.toUpperCase())" id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="btnsearch" class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+             <div class="login">
+                 <a href="login-register.html" class="d-flex justify-content-end  align-items-center">
+                     
+                     <i class="icon-login fa fa-user-circle" aria-hidden="true"></i>
+                     <span>login</span>
+                 </a>
+             </div>
+         </div>
+     </div>
+     <!-- End create bar top -->
+     <!-- create navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-color">
+      <div class="container flex-wrap d-flex justify-content-between">
+        <a class="navbar-brand" href="#"><img class="logo-fluid" src="images/logo/logo-en.png" alt=""></a>
+        <div class="close">
+          <span>X</span>
+         </div>
+        <div class="menu-center">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link " aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Categories <i class="icon-categ fa fa-angle-down" aria-hidden="true"></i></a>
+              <div class="dropdown-category">
+                <ul class="list-unstyled">
+                  <li><a href="#">Herbs</a></li>
+                  <li><a href="#">Herbs Herbs</a></li>
+                  <li><a href="#">Herbs <i class="icon-categ fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="dropdown-category">
+                      <ul class="list-unstyled">
+                        <li><a href="#">Herbs</a></li>
+                        <li><a href="#">Herbs Herbs</a></li>
+                        <li><a href="#">Herbs</a>
+                        
+                        </li>
+                        <li><a href="#">Herbs</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Herbs <i class="icon-categ fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="dropdown-category">
+                      <ul class="list-unstyled">
+                        <li><a href="#">Herbs</a></li>
+                        <li><a href="#">Herbs Herbs</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Herbs</a></li>
+                  
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="user-account.html">control panel</a>
+            </li>
+            <li class="nav-item d-none">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item d-none">
+              <a class="nav-link" href="about-us.html">About us</a>
+            </li>
+            <li class="nav-item d-none">
+              <a class="nav-link" href="contact-us.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tit-menu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link cart-view" aria-current="page" href="#!">
+                <i class="icon-cart fa fa-shopping-cart" aria-hidden="true"></i>
+                <span data-src="images/tag.png" style="background-image: url('images/tag.png');">10</span>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+   <!-- End create navbar -->
+     <!-- End header -->
+     <!-- page content -->
+     <main>
+       <!-- create top ads -->
+       <div class="itmes-ads">
+        <div class="container py-4">
+          <div class="row g-2">
+            <div class="col-12 col-md-6">
+               <div class="ads-img">
+                 <img class="card-img-top top-ads" src="images/ads-img/bailey-heedick-WOrgNVcptD8-unsplash.jpg" alt="">
+               </div>
+            </div>
+            <div class="col-12 col-md-6">
+             <div class="ads-img">
+               <img class="card-img-top top-ads" src="images/ads-img/artie-kostenko-Sgnhru4-z78-unsplash.jpg" alt="">
+             </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    <!-- End create top ads -->
+      <!-- create slider -->
+      <section class="slider">
+        <div class="container position-relative">
+         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+           <div class="carousel-indicators">
+             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+           </div>
+           <div class="carousel-inner">
+             <div class="carousel-item active position-relative">
+               <img class="card-img-top slider-size" src="images/sliders/overhead-view-green-healthy-fresh-vegetables-white-wooden-desk_23-2148062440.jpg" class="d-block w-100" alt="...">
+               <div class="bg-cover d-flex align-items-center justify-content-center">
+                <div class="animate__animated animate__fadeInUpBig content-slider text-center">
+                  <p>Choose what you need</p>
+                  <p>Free delivery for your first order</p>
+                  <a href="index.html"><span>shopping now</span></a>
+                </div>
+               </div>
+             </div>
+             <div class="carousel-item position-relative">
+               <img class="card-img-top slider-size" src="images/sliders/fresh-vegetables-fruits-bright-green-background-ripe-pears-grapes-lime-cabbage-lettuce-salad-peas-bok-choy-healthy-eating-creative-layout-grocery-organic-products_273609-38031.jpg" class="d-block w-100" alt="...">
+               <div class="bg-cover d-flex align-items-center justify-content-center">
+                <div class="animate__animated animate__fadeInUpBig content-slider text-center">
+                  <p>Choose what you need</p>
+                  <p>Free delivery for your first order</p>
+                  <a href="index.html"><span>shopping now</span></a>
+                </div>
+               </div>
+             </div>
+             <div class="carousel-item position-relative">
+               <img class="card-img-top slider-size" src="images/sliders/healthy-vegetables-wooden-table_1150-38007.jpg" class="d-block w-100" alt="...">
+               <div class="bg-cover d-flex align-items-center justify-content-center">
+                <div class="animate__animated animate__fadeInUpBig content-slider text-center">
+                  <p>Choose what you need</p>
+                  <p>Free delivery for your first order</p>
+                  <a href="index.html"><span>shopping now</span></a>
+                </div>
+               </div>
+             </div>
+           </div>
+           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+             <span class="visually-hidden">Previous</span>
+           </button>
+           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+             <span class="visually-hidden">Next</span>
+           </button>
+         </div>
+         
+        </div>
+      </section>
+      <!-- End create slider -->
+     <!-- create Deal Of The Day -->
+     <section class="deal-of py-5">
+       <div class="container">
+         <div class="title-top py-4 align-items-center d-flex justify-content-between">
+           <h3 class="color-text">Deal Of The Day</h3>
+           <a href="products-all.html">
+             <span>view all</span>
+           </a>
+         </div>
+         <div  class="owl-carousel owl-theme owl-loaded owl-drag">
+           <div class="owl-stage-outer">
+             <div class="owl-stage">
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/carrots_australia.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="#" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/2d67baf94fe7ba299db51290c3f5eac6.png" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/47f46a051ca44843540871a65384dc67.png" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/_1_7_3.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/avocado_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/avocado_us_1_6_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/avokado_product_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/bailey-heedick-WOrgNVcptD8-unsplash.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/basil_-_habag.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Deal/c72e4e47fd61433310f6e7fbd266d5a5.png" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+           
+             </div>
+            
+           </div>
+         </div>
+       </div>
+     </section>
+     <!-- End create Deal Of The Day -->
+      <!-- create Baskets -->
+     <section class="section-baskets  py-5">
+       <div class="container">
+         
+         <div class="title-top py-4 align-items-center d-flex justify-content-between">
+           <h3 class="color-text">Baskets</h3>
+           <a href="products-all.html">
+             <span>view all</span>
+           </a>
+         </div>
+          <div class="row g-2 justify-content-center id-basket">
+            
+          </div>
+       </div>
+     </section>
+     <!-- End create Baskets -->
+     <!-- create middle ads -->
+     <div class="container py-4">
+       <div class="row g-2">
+         <div class="col-12 col-md-3">
+           <div class="middle-ads">
+             <img class="card-img-top center-ads" src="images/middle-ads/deon-black-imeFOxvhnUY-unsplash.jpg" alt="">
+           </div>
+         </div>
+         <div class="col-12 col-md-9">
+           <div class="middle-ads">
+             <img class="card-img-top center-ads" src="images/middle-ads/icons8-team-seDjj4dmC9s-unsplash.jpg" alt="">
+           </div>
+           </div>
+       </div>
+     </div>
+     <!-- End create middle ads -->
+     <!-- create Packages -->
+     <section class="section-packages py-4">
+       <div class="container">
+         
+         <div class="title-top py-4 align-items-center d-flex justify-content-between">
+           <h3 class="color-text">Packages</h3>
+           <a href="products-all.html">
+             <span>view all</span>
+           </a>
+         </div>
+         <div  class="owl-carousel owl-theme owl-loaded owl-drag">
+           <div class="owl-stage-outer">
+             <div class="owl-stage">
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/hotchicksing-R_ZRouEm4xU-unsplash (1).jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="#" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/hotchicksing-R_ZRouEm4xU-unsplash.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/maria-lin-kim-8RaUEd8zD-U-unsplash.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/sara-scarpa-AJFQGDaFP-s-unsplash.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/the-creative-exchange-ixS7UCRJTdM-unsplash.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/hotchicksing-R_ZRouEm4xU-unsplash (1).jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/hotchicksing-R_ZRouEm4xU-unsplash.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/maria-lin-kim-8RaUEd8zD-U-unsplash.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/sara-scarpa-AJFQGDaFP-s-unsplash.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Packages/the-creative-exchange-ixS7UCRJTdM-unsplash.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+           
+             </div>
+            
+           </div>
+         </div>
+       </div>
+     </section>
+     <!-- End create Packages -->
+     <!-- create Fruits -->
+     <section class="section-fruits py-5">
+       <div class="container">
+         <div class="title-top py-4 align-items-center d-flex justify-content-between">
+           <h3 class="color-text">Fruits</h3>
+           <a href="products-all.html">
+             <span>view all</span>
+           </a>
+         </div>
+         <div  class="owl-carousel owl-theme owl-loaded owl-drag">
+           <div class="owl-stage-outer">
+             <div class="owl-stage">
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/avocado_us_1_6_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="#" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/banana.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/grape-fruit.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/kiwi.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/orange_naval.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/pomegranate_yemen.png" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/redgrapes.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/strawberry-ethiopia.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/sweet_apple_5_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Fruits/watermelon2_1_.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+           
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+     <!-- End create Fruits -->
+     <!-- create Vegetables -->
+     <section class="section-vegetables py-4">
+       <div class="container">
+         <div class="title-top py-4 align-items-center d-flex justify-content-between">
+           <h3 class="color-text">Vegetables</h3>
+           <a href="products-all.html">
+             <span>view all</span>
+           </a>
+         </div>
+         <div  class="owl-carousel owl-theme owl-loaded owl-drag">
+           <div class="owl-stage-outer">
+             <div class="owl-stage">
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/_1_7_3.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="#" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/_1__23_11_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/_1__28_2.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/baby-onion.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/beet.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/bell_pepper_green.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/cucumber.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/eggplant_black_-_big.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/ginger.png" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Vegetables/large_lemon.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+           
+             </div>
+            
+           </div>
+         </div>
+       </div>
+     </section>
+     <!-- End create Vegetables -->
+     <!-- create Herbs -->
+     <section class="section-herbs py-4">
+       <div class="container">
+         <div class="title-top py-4 align-items-center d-flex justify-content-between">
+           <h3 class="color-text">Herbs</h3>
+           <a href="products-all.html">
+             <span>view all</span>
+           </a>
+         </div>
+         <div  class="owl-carousel owl-theme owl-loaded owl-drag">
+           <div class="owl-stage-outer">
+             <div class="owl-stage">
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/86e62620-b105-4014-ba66-4786eff62729-thumbnail-370x370-70.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="#" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/baby_green_thyme_3.png" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/ICEBERG_LETTUCE_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/leek_1_.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/lettuce.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/mint_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/red-radish-bunch-100-grams_1_.png" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/rehan_keny_4.png" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/rosemary-bundle.png" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Herbs/white_radishes.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+           
+             </div>
+            
+           </div>
+         </div>
+       </div>
+     </section>
+     <!-- End create Herbs -->
+     <!-- create Boxes -->
+     <section class="section-boxes py-4">
+       <div class="container">
+         <div class="title-top py-4 align-items-center d-flex justify-content-between">
+           <h3 class="color-text">Boxes</h3>
+           <a href="products-all.html">
+             <span>view all</span>
+           </a>
+         </div>
+         <div  class="owl-carousel owl-theme owl-loaded owl-drag">
+           <div class="owl-stage-outer">
+             <div class="owl-stage">
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/_1__45_13.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="#" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/_1__46_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/_1__47_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/_1__48.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/_1__46_1.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/_1__49.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/file_107_7.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/file_108.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/_1__48.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+               <div class="owl-item active">
+                 <div class="card shadow-sm" >
+                   <div class="card-img text-center">
+                     <a href="product-single.html">
+                       <img src="images/img-Boxes/_1__49.jpg" alt="">
+                     </a>
+                   </div>
+                   <div class="card-content text-center">
+                     <a href="product-single.html">
+                       <h3>vegetables</h3>
+                     </a>
+                     <del>
+                       <p>150.00&nbsp;</p>
+                   </del>
+                   <p class="price">100.00&nbsp;</p>
+                   <a href="product-single.html" class="btn btn-success">Add to cart</a>
+                   </div>
+                   <div class="card-sales">
+                     <span>sales</span>
+                   </div>
+                   <div class="card-discount">
+                       <div class="line"></div>
+                       <span>10%</span>
+                   </div>
+                   
+                 </div>
+               </div>
+           
+             </div>
+            
+           </div>
+         </div>
+       </div>
+     </section>
+     <!-- End create Boxes -->
+     </main>
+      <!-- End page content -->
+      <!-- create footer -->
+       <footer class="main-footer">
+         <div class="footer-menu">
+          <div class="container">
+            <div class="row g-2">
+             <div class="col-6 col-lg-4 ">
+               <div class="footer-about px-3">
+                 <a class="logo" href="#">
+                   <img src="images/logo/logo-en.png" alt="">
+                 </a>
+                 <p>Lorem Ipsum is simply dummy text
+                   of the printing and typesetting industry.</p>
+                 <div class="social d-flex justify-content-start align-items-center">
+                   <a href="#">
+                    <i class="icon-social fab fa-facebook-f" aria-hidden="true"></i>
+                  </a>
+                   <a href="#">
+                    <i class="icon-social fab fa-twitter" aria-hidden="true"></i>
+                  </a>
+                   <a href="#">
+                    <i class="icon-social fab fa-google-plus-g" aria-hidden="true"></i>
+                  </a>
+                   <a href="#">
+                    <i class="icon-social fab fa-instagram" aria-hidden="true"></i>
+                  </a>
+                 </div>
+               </div>
+             </div>
+             <div class="col-6 col-lg-2">
+                <div class="servies">
+                  <h3>customers service:</h3>
+                <ul class="list-unstyled my-4">
+                  <li>
+                    <a href="#">Arithmetic</a>
+                  </li>
+                  <li>
+                    <a href="#">contact us</a>
+                  </li>
+                </ul>
+                </div>
+             </div>
+             <div class="col-6 col-lg-2">
+              <div class="servies">
+                <h3>About us:</h3>
+              <ul class="list-unstyled my-4">
+                <li>
+                  <a href="#">About us</a>
+                </li>
+                <li>
+                  <a href="#">Why organic food</a>
+                </li>
+              </ul>
+              </div>
+           </div>
+           <div class="col-6 col-lg-2">
+            <div class="payment">
+              <h3>payment methods:</h3>
+            <ul class="list-unstyled my-4 d-flex flex-wrap ">
+              <li>
+                <img src="images/visa/mada.png" alt="">
+              </li>
+              <li>
+                <img src="images/visa/mastercard.png" alt="">
+              </li>
+              <li>
+                <img src="images/visa/paytabs.png" alt="">
+              </li>
+              <li>
+                <img src="images/visa/visa.png" alt="">
+              </li>
+            </ul>
+            </div>
+         </div>
+         <div class="col-6 col-lg-2">
+          <div class="Shipping">
+            <h3>Shipping:</h3>
+          <ul class="list-unstyled my-4">
+            <li>
+              <img src="images/visa/smsa.png" alt="">
+            </li>
+           
+          </ul>
+          </div>
+       </div>
+            </div>
+          </div>
+         </div>
+        <div class="footer-copyright">
+         <div class="container">
+          <p>creaet by team</p>
+         </div>
+        </div>
+       </footer>
+      <!-- End create footer -->
+   
+
+
+    <!-- End page content -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/js.js"></script>
+</body>
+</html>
